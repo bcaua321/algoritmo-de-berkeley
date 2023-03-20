@@ -13,11 +13,17 @@ namespace Berkeley
             var dateFour = new DateTime(1, 1, 1, 3, 10, 0);
 
 
-            var listComputers = new List<Computer>() { new Computer(1, dateOne, true, true), new Computer(2, dateTwo, false, true), new Computer(3, dateThree, false, true), new Computer(4, dateFour, false, true) };
+            // Lista dos computadores
+            var listComputers = new List<Computer>() { 
+                new Computer(1, dateOne, true, true), 
+                new Computer(2, dateTwo, false, true),
+                new Computer(3, dateThree, false, true), 
+                new Computer(4, dateFour, false, true) 
+            };
 
-            var master = new Master(listComputers);
+            var berkerley = new Berkerley(listComputers);
 
-            master.Execute();
+            berkerley.Execute();
         }
     }
 }

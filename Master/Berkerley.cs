@@ -4,10 +4,10 @@ using System.Linq;
 
 namespace Berkeley
 {
-    public class Master
+    public class Berkerley
     {
         private List<Computer> listComputers { get; }
-        public Master(List<Computer> listComputers)
+        public Berkerley(List<Computer> listComputers)
         {
             this.listComputers = listComputers;
         }
@@ -40,7 +40,7 @@ namespace Berkeley
         // Verifica o relógio de todos os computadores secundários e faz a média
         private int TimeMean(DateTime timeMaster)
         {
-            var secondaryPcs = this.listComputers.Where(x => !x.IsMaster).ToList();
+            var secondaryPcs = this.listComputers.Where(x => !x.IsOnline).ToList();
             int soma = 0;
             int minutePcMaster = (timeMaster.Hour * 60) + timeMaster.Minute;
 
